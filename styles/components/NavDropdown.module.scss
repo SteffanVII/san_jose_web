@@ -1,0 +1,100 @@
+@import "../variables";
+
+.nav_dropdown {
+    position: relative;
+
+    padding: 10px;
+    padding-right: 30px;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    font-family: $inter;
+
+    cursor: pointer;
+
+    transition: color 0.2s,
+                background-color 0.2s;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: calc(50% + 1px);
+        right: 10px;
+        transform: translateY(-50%);
+
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #515151;
+
+        background-color: transparent;
+    }
+
+    .nav_dropdown_shown {}
+
+    .dropdown_links_container {
+        position: absolute;
+        top: calc(100%  + 10px);
+        left: 0%;
+        left: 50%;
+        transform: translate(-50%, 40px);
+    
+        display: flex;
+        flex-flow: column;
+        
+        width: fit-content;
+        height: fit-content;
+        opacity: 0;
+        visibility: hidden;
+
+        border-radius: 5px;
+        background-color: white;
+    
+        box-shadow: 0px 0px 10px 4px rgba(185, 185, 185, 0.1);
+    
+        overflow: hidden;
+
+        // transition: opacity 0.2s,
+        //             visibility 0s 0.2s;
+
+        a {
+
+            padding: 14px !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            border-radius: 0 !important;
+
+            white-space: nowrap;
+
+            font-family: $inter;
+    
+            &:hover {
+                color: white;
+                background-color: $links-hover-bg;
+            }
+        }
+    }
+    
+    &.nav_dropdown_shown {
+        position: relative;
+
+        &::before {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        .dropdown_links_container {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translate(-50%, 0px);
+    
+            transition: transform 0.2s,
+                        opacity 0.2s;
+        }
+    }
+
+    &:hover {
+        color: white;
+        background-color: $links-hover-bg;
+    }
+}

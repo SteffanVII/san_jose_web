@@ -1,0 +1,73 @@
+@import "../styles/variables";
+
+.documentRequestForm {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+
+    .documentRequirementsContainer {
+        width: 100%;
+        li {
+            font-family: $inria;
+            font-weight: bolder;
+        }
+    }
+
+    .documentRequestFormFieldset {
+        display: flex;
+        flex-flow: column;
+
+        width: 100%;
+
+        border: none;
+
+        label {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            
+            font-family: $inter;
+            font-weight: 500;
+
+            span {
+                color: red;
+            }
+        }
+
+        input[type=text], input[type=number] {
+            width: 100%;
+            padding: 14px;
+
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(217, 233, 242);
+            font-family: $inter;
+            font-weight: bold;
+
+            &::placeholder {
+                font-family: $inter;
+            }
+        }
+    }
+
+    .documentRequestFormSubmit {
+        width: fit-content;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        border: none;
+        border-radius: 40px;
+        font-family: $inter;
+        font-weight: bold;
+
+        &:hover {
+            background-color: $links-hover-bg;
+        }
+
+        &:active {
+            background-color: rgb(215, 215, 215);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+#documentRequestPortal {
+    
+    #documentRequestContainer {
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+
+        select {
+            padding: 10px;
+        }
+    }
+
+}

@@ -1,0 +1,72 @@
+@import "../variables";
+
+#landing {
+
+    #welcome {
+        span {
+            font-size: 40px;
+            font-family: $inria;
+            font-weight: bold;
+        }
+        
+        p {
+            font-family: $inter;
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+
+            line-height: 28px;
+        }
+    }
+    
+    #history {
+        span {
+            font-size: 28px;
+            font-family: $inria;
+            font-weight: bold;
+        }
+        
+        p {
+            font-family: $inter;
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            
+            line-height: 28px;
+        }
+    }
+
+    .vaccine {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .mapouter{
+        position:relative;
+        text-align:right;
+        width:100%;
+        height:400px;
+
+        span {
+            font-family: $inria;
+            font-size: 26px;
+            font-weight: bolder;
+        }
+
+        .gmap_canvas {
+            overflow:hidden;
+            background:none!important;
+            width:100%;
+            height:400px;
+
+            .gmap_iframe {
+                height:400px!important;
+            }
+        }
+        
+    }
+}
